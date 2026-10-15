@@ -15,15 +15,19 @@
     </div>
   </header>
   <main>
-    <p class="meta">Last updated: 22 July 2026</p>
+    <p class="meta">Last updated: 14 October 2026</p>
 
     <div class="card">
-      <p>This Privacy Policy explains what information <strong>MahjongNook</strong> ("we", "us", the "Game"),
-      operated by <strong>dumplingfish (a sole proprietorship)</strong>, collects when you play, and how we use and share it. It
-      applies to the Game on all platforms where it is distributed, including the Apple App Store, Google Play,
-      and Steam.</p>
-      <p>You can play offline without an account. Creating or signing in to an account is required for online
-      play, social features, purchases, and cloud-saved progress.</p>
+      <p>This Privacy Policy explains what information <strong>dumplingfish (a sole proprietorship)</strong> ("we", "us")
+      collects when you play our games, and how we use and share it. It covers <strong>MahjongNook</strong> and
+      <strong>MahjongNook Cards</strong> (each a "Game", together the "Games") on every platform where they are
+      offered, including the Apple App Store, Google Play, Steam, the web, and Discord. Where something applies to
+      only one Game, we say so.</p>
+      <p><strong>MahjongNook:</strong> you can play offline without an account. Creating or signing in to an account
+      is required for online play, social features, purchases, and cloud-saved progress.</p>
+      <p><strong>MahjongNook Cards:</strong> you can play without signing in. When you do, the Game creates a random
+      player identifier on your device, and the progress and items tied to it are kept on our servers. Signing in
+      lets your progress follow you to other devices and is required for purchases.</p>
     </div>
 
     <h2>1. Information we collect</h2>
@@ -32,8 +36,10 @@
     <ul>
       <li><strong>Sign-in identifiers.</strong> When you create or sign in to an account we process a player
         identifier and, depending on the method you choose, an email address (email/password sign-in) or a
-        third-party identifier from <strong>Google, Apple, or Steam</strong>. We do not offer anonymous guest
-        accounts.</li>
+        third-party identifier from <strong>Google, Apple, Steam, or Discord</strong>. With Discord sign-in
+        (MahjongNook Cards) we receive your Discord user ID and username. MahjongNook does not offer anonymous
+        guest accounts; MahjongNook Cards keeps a random player identifier for players who have not signed in,
+        as described above.</li>
       <li><strong>Display name.</strong> A name you choose, shown to other players in matches and social features.</li>
     </ul>
 
@@ -47,16 +53,21 @@
         read and which gifts you have claimed.</li>
       <li>Settings and preferences you set in the Game.</li>
       <li>This data is stored in your account's cloud save so it follows you across devices.</li>
+      <li><strong>MahjongNook Cards:</strong> the moves of the hands you play. Our servers check them so results
+        and rewards are fair, and they power match replays and hand review. Replays, saved matches, and settings
+        are also kept on your device.</li>
     </ul>
 
     <h3>Purchases</h3>
     <ul>
-      <li>When you buy a real-money item (e.g., a Jade pack), the purchase and payment are handled by the
-        platform store — <strong>Apple, Google, or Valve/Steam</strong>. <em>We never receive or store your
+      <li>When you buy a real-money item (e.g., a Jade pack or a Club subscription), the purchase and payment
+        are handled by the platform store: <strong>Apple, Google, Valve/Steam, or Discord</strong>. <em>We never receive or store your
         full payment-card details.</em></li>
       <li>We receive and process the store's purchase receipt/transaction to verify it and grant your items,
         and we keep a record of the validated transaction (product, store, transaction id, and grant) for
         fulfillment, support, and fraud prevention.</li>
+      <li>In MahjongNook Cards on iOS, purchases are verified through <strong>RevenueCat</strong>, which receives
+        your player identifier and the store's purchase records so we can confirm and grant what you bought.</li>
     </ul>
 
     <h3>Social features</h3>
@@ -68,12 +79,16 @@
 
     <h3>Multiplayer networking</h3>
     <ul>
-      <li>Online matches connect through a relay service, which carries game actions between players. Network
+      <li><strong>MahjongNook Cards:</strong> online tables run on our servers, hosted by Cloudflare, which
+        process network identifiers such as IP addresses to connect you. Other players never see your IP address.</li>
+      <li><strong>MahjongNook:</strong> online matches connect through a relay service, which carries game actions between players. Network
         identifiers such as IP addresses are processed by the transport/relay provider to route traffic; the
         Game's design relays connections rather than exposing players' IP addresses directly to one another.</li>
     </ul>
 
     <h3>Device &amp; diagnostics</h3>
+    <p>This section describes MahjongNook. MahjongNook Cards does not currently collect crash reports or
+    analytics.</p>
     <ul>
       <li><strong>Crash and error reports.</strong> If the Game crashes or hits an error, we collect diagnostic
         data to fix it: app version, engine version, platform, <strong>device model</strong>, recent log
@@ -112,19 +127,25 @@
     their own privacy policies:</p>
     <table>
       <tr><th>Provider</th><th>Purpose</th></tr>
-      <tr><td>Unity Gaming Services (Unity Technologies) — Authentication, Cloud Save, Economy, Friends, Lobby, Relay, Cloud Code, Cloud Diagnostics, Analytics</td><td>Accounts, saved progress, economy, social, multiplayer, crash reporting, anonymous gameplay analytics</td></tr>
-      <tr><td>Google Firebase (Authentication)</td><td>Email/password and Google sign-in</td></tr>
+      <tr><td>Unity Gaming Services (Unity Technologies) (MahjongNook): Authentication, Cloud Save, Economy, Friends, Lobby, Relay, Cloud Code, Cloud Diagnostics, Analytics</td><td>Accounts, saved progress, economy, social, multiplayer, crash reporting, anonymous gameplay analytics</td></tr>
+      <tr><td>Google Firebase (Authentication)</td><td>Email/password and Google sign-in (both Games), and Discord sign-in (MahjongNook Cards)</td></tr>
+      <tr><td>Cloudflare</td><td>Hosting for MahjongNook Cards: accounts, saved progress, purchases, online tables, matchmaking</td></tr>
+      <tr><td>Discord</td><td>Discord sign-in, the Discord Activity, and Discord purchases (MahjongNook Cards)</td></tr>
+      <tr><td>RevenueCat</td><td>Verifying App Store purchases and subscriptions (MahjongNook Cards)</td></tr>
       <tr><td>Apple</td><td>Sign in with Apple, App Store purchases</td></tr>
       <tr><td>Google Play</td><td>Play purchases</td></tr>
       <tr><td>Valve / Steam</td><td>Steam sign-in and Steam purchases</td></tr>
-      <tr><td>Edgegap</td><td>Dedicated multiplayer server hosting</td></tr>
+      <tr><td>Edgegap</td><td>Dedicated multiplayer server hosting (MahjongNook)</td></tr>
     </table>
     <p>Please review their privacy policies for details on their processing:
     <a href="https://unity.com/legal/privacy-policy">Unity</a>,
     <a href="https://policies.google.com/privacy">Google / Firebase</a>,
     <a href="https://www.apple.com/legal/privacy/">Apple</a>,
-    <a href="https://store.steampowered.com/privacy_agreement/">Valve / Steam</a>, and
-    <a href="https://edgegap.com/edgegap-arbitrium-privacy-policy/">Edgegap</a>.</p>
+    <a href="https://store.steampowered.com/privacy_agreement/">Valve / Steam</a>,
+    <a href="https://edgegap.com/edgegap-arbitrium-privacy-policy/">Edgegap</a>,
+    <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a>,
+    <a href="https://discord.com/privacy">Discord</a>, and
+    <a href="https://www.revenuecat.com/privacy/">RevenueCat</a>.</p>
 
     <h2>4. Sharing &amp; disclosure</h2>
     <ul>
@@ -147,8 +168,10 @@
     <p>Depending on where you live (e.g., the EEA/UK under GDPR, or California under CCPA/CPRA), you may have the
     right to access, correct, delete, or export your personal information, and to object to or restrict certain
     processing. To make a request, contact us at <a href="mailto:dumplingfishgames@gmail.com">dumplingfishgames@gmail.com</a>. You can also
-    delete your account and its associated data at any time from within the Game (Account settings), or by
-    contacting us at the same address. We will not discriminate against you for exercising these rights. If you
+    delete your account and its associated data at any time from within the Game (in MahjongNook, Account
+    settings; in MahjongNook Cards, Profile, then Account, then Delete account), or by contacting us at the same
+    address. Deleting an account does not cancel a subscription billed by an app store; cancel it in that
+    store's settings. We will not discriminate against you for exercising these rights. If you
     are in the EEA or the UK, you also have the right to lodge a complaint with your local data protection
     authority.</p>
 
