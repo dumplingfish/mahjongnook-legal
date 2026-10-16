@@ -56,6 +56,11 @@
       <li><strong>MahjongNook Cards:</strong> the moves of the hands you play. Our servers check them so results
         and rewards are fair, and they power match replays and hand review. Replays, saved matches, and settings
         are also kept on your device.</li>
+      <li><strong>MahjongNook Cards ranked play:</strong> your ranked rating and its history (games, wins,
+        peak), who you played ranked matches with in the last 24 hours (so repeat pairings count for less), and
+        records of ranked matches you left early or did not join, which can pause ranked play for a while.</li>
+      <li><strong>Leaderboards (MahjongNook Cards):</strong> if you play ranked matches or rated puzzles, your
+        display name, avatar, title, level, and rating appear on public leaderboards that other players can see.</li>
     </ul>
 
     <h3>Purchases</h3>
@@ -75,12 +80,34 @@
       <li>Friends list, friend requests, online presence, and lobby invitations, if you use these features.</li>
       <li>In-match expression uses a <strong>fixed set of preset emotes</strong> — the Game does not include
         free-form text chat, so we do not collect typed messages between players.</li>
+      <li><strong>Blocks (MahjongNook Cards):</strong> the players you block, so we can keep you apart in
+        matchmaking and hide their invites and emotes.</li>
+      <li><strong>Discord (MahjongNook Cards):</strong> when you play inside Discord and allow it, the Game shows
+        what you are doing (for example the rules you are playing and the hand number) in your Discord status,
+        visible to people who can see your Discord profile. In a voice channel, the Game shows the names and
+        avatars of people in the call so you can see who has joined your table; we do not store that list.</li>
+    </ul>
+
+    <h3>Reports, moderation &amp; bans (MahjongNook Cards)</h3>
+    <ul>
+      <li><strong>Reports.</strong> If you report a player, we keep the report: who sent it, which player it is
+        about, the reason and any note you add, and, for a report made at a table, a reference to that match
+        (its table code and move count) so we can review the match.</li>
+      <li><strong>Bans.</strong> If we suspend an account, we keep a record of the account or device identifier,
+        the reason, when it ends, and other identifiers of ours seen used together with it. We do not ban by IP
+        address.</li>
+      <li><strong>Names.</strong> Display names are checked automatically against a list of offensive words when
+        you set them, and a name that breaks the rules may be replaced.</li>
     </ul>
 
     <h3>Multiplayer networking</h3>
     <ul>
       <li><strong>MahjongNook Cards:</strong> online tables run on our servers, hosted by Cloudflare, which
-        process network identifiers such as IP addresses to connect you. Other players never see your IP address.</li>
+        process network identifiers such as IP addresses to connect you. Other players never see your IP address.
+        We use your IP address to limit how many requests one connection can make (protection against abuse and
+        attacks). For ranked matchmaking we turn it into a salted, one-way code so that two players on the same
+        network are not placed in the same ranked match; that code is kept only while you are queued and at
+        that match, and we do not store your IP address.</li>
       <li><strong>MahjongNook:</strong> online matches connect through a relay service, which carries game actions between players. Network
         identifiers such as IP addresses are processed by the transport/relay provider to route traffic; the
         Game's design relays connections rather than exposing players' IP addresses directly to one another.</li>
@@ -98,10 +125,20 @@
     </ul>
 
     <h3>Device &amp; diagnostics</h3>
-    <p>This section describes MahjongNook. MahjongNook Cards collects no crash reports or analytics events;
-    it only notes, for each profile, the day it was first seen and the days it was active, and counts how many
-    players come back (for example, the next day or a week later). These counts contain no names, emails or
-    device details.</p>
+    <p><strong>MahjongNook Cards</strong> collects:</p>
+    <ul>
+      <li><strong>Error reports.</strong> If the Game hits an error, it sends a short report: the error message,
+        where in the Game's code it happened, the app version, and which screen was open. At most a few per
+        session, and they contain no names, emails, or player identifiers.</li>
+      <li><strong>Server logs.</strong> Our servers log requests and errors so we can fix problems. Player and
+        device identifiers, tokens, and IP addresses are removed from these logs or replaced with one-way codes.</li>
+      <li><strong>Usage counts.</strong> Counts such as how long players wait for a match, how many matches start
+        and finish, and how often connections drop, to keep online play working well. They are not tied to your
+        name or email and are not used for advertising.</li>
+      <li><strong>Returning players.</strong> For each profile, the day it was first seen and the days it was
+        active, used to count how many players come back (for example, the next day or a week later).</li>
+    </ul>
+    <p>The rest of this section describes MahjongNook.</p>
     <ul>
       <li><strong>Crash and error reports.</strong> If the Game crashes or hits an error, we collect diagnostic
         data to fix it: app version, engine version, platform, <strong>device model</strong>, recent log
@@ -121,7 +158,8 @@
       <li>Provide and operate the Game, your account, and cloud-saved progress.</li>
       <li>Run online matchmaking, multiplayer sessions, and social features.</li>
       <li>Process and verify purchases and grant purchased items.</li>
-      <li>Maintain fair play, prevent fraud and abuse, and enforce our Terms.</li>
+      <li>Maintain fair play, prevent fraud, cheating, and abuse, review player reports, and enforce our Terms
+        (including suspending accounts).</li>
       <li>Diagnose crashes, debug, and improve stability and the player experience.</li>
       <li>Provide customer support and respond to your requests.</li>
     </ul>
@@ -175,7 +213,9 @@
     <h2>5. Data retention</h2>
     <p>We keep account and gameplay data while your account is active. Purchase/transaction records are kept as
     long as needed for fulfillment, support, fraud prevention, and legal/accounting obligations. Diagnostic
-    reports are retained for a limited period for debugging. When you delete your account, we delete or
+    reports and server logs are retained for a limited period for debugging (MahjongNook Cards server logs
+    are kept for days, not months). Player reports are kept until reviewed and for as long as needed to handle
+    repeat problems, and ban records for as long as the ban lasts and a reasonable time after. When you delete your account, we delete or
     de-identify the personal data associated with it, except records we must keep for legal, accounting, or
     fraud-prevention purposes.</p>
 
